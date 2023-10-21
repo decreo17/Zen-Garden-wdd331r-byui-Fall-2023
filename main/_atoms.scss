@@ -24,13 +24,48 @@
   margin-top: 1em;
   padding-top: 1.5em;
 }
+
+//flexbox mixin for compatibility
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+/*
+.wrapper {
+  @include flexbox();
+}
+
+.item {
+  @include flex(1 200px);
+  @include order(2);
+}*/
+
 // these styles here should describe how the atoms (elements) should appear most of the time.  They can be overridden at the molecule (block) as necessary
 h3,
 h4 {
   font-family: $fonts-headline;
   margin: 0;
 }
-h1 {
+/*h1 {
   background: $accent1;
   color: $text-light;
   display: inline-block;
@@ -42,11 +77,11 @@ h1 {
 h2 {
   font-family: $fonts-body;
   color: $text-light;
-  font-weight: 900; /* Heavy */
+  font-weight: 900;  //Heavy
   font-size: 6em;
   letter-spacing: 1px;
   line-height: 1em;
-}
+}*/
 h3 {
   font-size: 2.25em;
   font-weight: 200; /* Thin */
@@ -76,4 +111,26 @@ a {
 }
 a:hover {
   border-color: $accent1;
+}
+
+header {
+  padding: 0;
+  margin: 0;
+	height: 600px;
+}
+
+
+footer {
+  background-color: $accent1;
+  text-align: center;
+  padding: 40px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+aside {
+  background-color: $accent2;
+  color: $text-dark;
+
+  padding: 5%;
 }

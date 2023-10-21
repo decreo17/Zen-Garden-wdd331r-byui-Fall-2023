@@ -1,36 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Open+Sans&family=Original+Surfer&family=Roboto&display=swap");
-/*
-.wrapper {
-  @include flexbox();
-}
-
-.item {
-  @include flex(1 200px);
-  @include order(2);
-}*/
 h3,
 h4 {
   font-family: "Original Surfer", "Open Sans", Lora, sans-serif;
   margin: 0;
 }
 
-/*h1 {
-  background: $accent1;
-  color: $text-light;
+h1 {
+  background: #FFCC57;
+  color: #fff;
   display: inline-block;
   font-weight: normal;
   margin-bottom: 1em;
   padding: 0.5em 1em;
   margin: 0;
 }
+
 h2 {
-  font-family: $fonts-body;
-  color: $text-light;
-  font-weight: 900;  //Heavy
+  font-family: Roboto, arial, sans-serif;
+  color: #fff;
+  font-weight: 900; /* Heavy */
   font-size: 6em;
   letter-spacing: 1px;
   line-height: 1em;
-}*/
+}
+
 h3 {
   font-size: 2.25em;
   font-weight: 200; /* Thin */
@@ -66,48 +59,12 @@ a:hover {
   border-color: #FFCC57;
 }
 
-header {
-  padding: 0;
-  margin: 0;
-  height: 600px;
-}
-
-footer {
-  background-color: #FFCC57;
-  text-align: center;
-  padding: 40px;
-  font-weight: 700;
-  letter-spacing: 5px;
-}
-
-aside {
-  background-color: #C4B0A9;
-  color: #242834;
-  padding: 5%;
-}
-
-[role=banner] {
-  background: transparent url(../images/starfishes-1351559_1920\ \(1\).jpg) no-repeat center;
-  width: 100%;
-  background-size: cover;
-  background-position-x: center;
-  background-position-y: right;
-  padding-top: -400px;
-}
 [role=banner] > h1 {
-  background: transparent url(../images/Header.png) no-repeat center;
-  background-size: 200px;
-  width: 230px;
-  height: 80px;
-  margin-top: 50px;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-[role=banner] h2 {
-  margin-left: 20px;
-  margin-top: -30px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   color: #fff;
+  padding: 0.5em;
 }
 
 .summary {
@@ -116,7 +73,7 @@ aside {
   text-transform: uppercase;
   color: #fff;
   padding: 0.5em;
-  padding: 5%;
+  padding: 15% 0;
 }
 .summary p:last-child {
   border-top: 1px solid #FFCC57;
@@ -127,21 +84,15 @@ aside {
   color: #fff;
 }
 
-.preamble, .explanation, .benefits, .requirements {
+.preamble {
+  background: rgba(255, 255, 255, 0.9);
   color: #242834;
-  background-color: #489AC2;
-  padding: 5%;
-}
-
-.participation {
-  color: #fff;
-  background-color: #489AC2;
-  padding: 5%;
+  margin-left: -30%;
+  padding: 5% 5% 5% 30%;
 }
 
 .intro {
-  display: flex;
-  flex-flow: column nowrap;
+  padding: 5%;
 }
 
 * {
@@ -150,13 +101,16 @@ aside {
 
 html {
   background-color: #095B93;
+  padding: 5%;
 }
 
 body {
   font-family: Roboto, arial, sans-serif;
   font-size: 85%;
   color: #242834;
+  background-color: #489AC2;
   margin: 0;
+  padding: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */
