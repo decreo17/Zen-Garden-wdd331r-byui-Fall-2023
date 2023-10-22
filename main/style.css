@@ -78,6 +78,13 @@ footer {
   padding: 40px;
   font-weight: 700;
   letter-spacing: 5px;
+  /* CHANGING POSITION OF FOOTER
+  To add footer to the bottom of the body
+  it has to be positioned relative to the body
+  so the position of body was set to position: relative.*/
+  width: 100%;
+  position: absolute;
+  bottom: -96px;
 }
 
 aside {
@@ -153,6 +160,7 @@ html {
 }
 
 body {
+  position: relative;
   font-family: Roboto, arial, sans-serif;
   font-size: 85%;
   color: #242834;
