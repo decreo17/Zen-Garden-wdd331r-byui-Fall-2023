@@ -90,6 +90,7 @@ footer {
 aside {
   background-color: #C4B0A9;
   color: #242834;
+  margin-top: 50px;
   padding: 5%;
 }
 
@@ -150,7 +151,51 @@ aside {
   display: flex;
   flex-flow: column nowrap;
 }
+@media all and (min-width: 601px) {
+  .intro {
+    display: grid;
+  }
+  .intro .summary {
+    background-color: #489AC2;
+    max-width: 500px;
+    margin-top: -450px;
+    margin-bottom: 200px;
+    margin-left: 20px;
+    padding: 1%;
+  }
+  .intro .preamble {
+    margin: 50px;
+    background-color: rgba(72, 154, 194, 0.5);
+  }
+}
 
+@media only screen and (min-width: 601px) {
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "intro   intro   intro" "main    main    sidebar" "footer  footer  footer";
+  }
+  .intro {
+    grid-area: intro;
+    display: flex;
+  }
+  .main {
+    grid-area: main;
+    margin-left: 5%;
+    margin-bottom: 7%;
+    margin-right: 5%;
+  }
+  .sidebar {
+    grid-area: sidebar;
+    margin-top: 0;
+    margin-right: 10%;
+    max-height: 800px;
+  }
+  footer {
+    grid-area: footer;
+    margin-left: -3.3%;
+  }
+}
 * {
   box-sizing: border-box;
 }

@@ -1,0 +1,36 @@
+@media only screen and (min-width: 601px) {
+    .page-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "intro   intro   intro" 
+            "main    main    sidebar"
+            "footer  footer  footer";
+    }
+
+    .intro {
+        grid-area: intro;
+        display: flex;
+    }
+
+    .main {
+        grid-area: main;
+        margin-left: 5%;
+        margin-bottom: 7%;
+        margin-right: 5%;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        margin-top: 0;
+        margin-right: 10%;
+        max-height: 800px;
+    }
+
+    footer {
+        grid-area: footer;
+        margin-left: -3.3%;
+    }
+
+
+}
