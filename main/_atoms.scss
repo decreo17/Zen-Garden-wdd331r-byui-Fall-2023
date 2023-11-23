@@ -140,4 +140,22 @@ aside {
   color: $text-dark;
   margin-top: 50px;
   padding: 5%;
+  & li {
+    list-style-type: none;
+    padding-bottom: 10px;
+  }
+  & a {
+      border: none;
+  }
+  a.design-name {
+      display: block;
+      font-weight: bold;
+      text-transform: uppercase;
+      position: relative;
+      left: -25px;
+  }
+  a.designer-name {
+      display: inline;
+      font-weight: bold;
+  }
 }

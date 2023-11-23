@@ -11,6 +11,7 @@
     .intro {
         grid-area: intro;
         display: flex;
+        position: relative;
     }
 
     .main {
@@ -24,7 +25,7 @@
         grid-area: sidebar;
         margin-top: 0;
         margin-right: 10%;
-        max-height: 800px;
+        height: fit-content;
     }
 
     footer {
