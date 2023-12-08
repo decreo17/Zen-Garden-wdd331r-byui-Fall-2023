@@ -161,16 +161,18 @@ aside a.designer-name {
   color: #fff;
 }
 
-.preamble, .explanation, .benefits, .requirements {
+.preamble, .explanation, .benefits, .requirements, .participation {
   color: #242834;
-  background-color: #489AC2;
   padding: 5%;
-}
-
-.participation {
-  color: #fff;
-  background-color: #489AC2;
-  padding: 5%;
+  background: linear-gradient(to right, #C4B0A9, #489AC2 75%);
+  /* mask created with: https://css-generators.com/wavy-shapes/ */
+  --mask:
+    radial-gradient(24.71px at 50% 33.60px,#000 99%,#0000 101%) calc(50% - 24px) 0/48px 51% repeat-x,
+    radial-gradient(24.71px at 50% -21.6px,#0000 99%,#000 101%) 50% 12px/48px calc(51% - 12px) repeat-x,
+    radial-gradient(24.71px at 50% calc(100% - 33.60px),#000 99%,#0000 101%) calc(50% - 24px) 100%/48px 51% repeat-x,
+    radial-gradient(24.71px at 50% calc(100% + 21.60px),#0000 99%,#000 101%) 50% calc(100% - 12px)/48px calc(51% - 12px) repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
 }
 
 .intro {
