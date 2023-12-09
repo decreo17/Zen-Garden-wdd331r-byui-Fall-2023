@@ -112,6 +112,52 @@ aside a.designer-name {
   font-weight: bold;
 }
 
+@keyframes bubbles {
+  from {
+    bottom: 0px;
+  }
+  to {
+    bottom: 100%;
+  }
+}
+@keyframes light {
+  0% {
+    translate: 0px 0px;
+  }
+  50% {
+    translate: 100px 0px;
+  }
+  100% {
+    translate: 0px 0px;
+  }
+}
+@keyframes swimming {
+  0% {
+    translate: 0px 0px;
+    transform: rotate(0deg);
+  }
+  10% {
+    translate: 10px 10px;
+    transform: rotate(0deg);
+  }
+  20% {
+    translate: 20px 0px;
+  }
+  40% {
+    translate: 50px 10px;
+  }
+  60% {
+    translate: 20px 0px;
+  }
+  80% {
+    translate: 10px 10px;
+    transform: rotate(3deg);
+  }
+  100% {
+    translate: 0px 0px;
+    transform: rotate(0deg);
+  }
+}
 [role=banner] {
   background: transparent url(../images/starfishes-1351559_1920\ \(1\).jpg) no-repeat center;
   width: 100%;
@@ -173,6 +219,64 @@ aside a.designer-name {
   padding: 5%;
 }
 
+.intro:after {
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  animation: light 5s infinite;
+  content: "";
+  display: block;
+  width: calc(100% - 100px);
+  height: 100%;
+  background: linear-gradient(110deg, rgba(24, 117, 71, 0) 40%, rgba(136, 192, 189, 0.537254902) 50% 55%, rgba(24, 117, 71, 0) 60%);
+  background-position: center top;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.page-wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  display: block;
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(110deg, rgba(24, 117, 71, 0) 40%, rgba(136, 192, 189, 0.537254902) 50% 55%, rgba(24, 117, 71, 0) 60%), linear-gradient(225deg, #3A7BA9, #61B2B2, rgba(24, 117, 71, 0) 20%), linear-gradient(150deg, #265896, #56A6B6, rgba(24, 117, 71, 0) 50%), linear-gradient(10deg, #134464 0%, rgba(24, 117, 71, 0) 10%), linear-gradient(357deg, #134464 0%, rgba(24, 117, 71, 0) 10%), linear-gradient(10deg, rgba(136, 192, 189, 0.537254902), rgba(135, 178, 176, 0.3725490196), rgba(24, 117, 71, 0) 50%), linear-gradient(357deg, rgba(136, 192, 189, 0.537254902), rgba(135, 178, 176, 0.3725490196), rgba(24, 117, 71, 0) 50%);
+  background-position: bottom;
+}
+
+.page-wrapper:after {
+  animation: bubbles 20s ease-out 1;
+  position: absolute;
+  bottom: 100%;
+  content: "";
+  display: block;
+  width: 100vw;
+  height: 100%;
+  background: radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.3) 13%, rgba(255, 255, 255, 0) 14%) 0 0, radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%) -130px -170px, radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.2) 13%, rgba(255, 255, 255, 0) 14%) 0 0;
+  background-size: 280px 280px, 400px 400px, 200px 200px, 300px 300px, 240px 240px, 330px 330px, 100% 100%;
+}
+
+.preamble::before {
+  content: "";
+  animation: swimming 5s ease-in-out infinite;
+  width: 100px;
+  height: 100px;
+  display: block;
+  background-image: url(../images/fish.png);
+  background-size: contain;
+  position: absolute;
+  left: -5px;
+  top: 735px;
+}
+
+@media all and (min-width: 601px) {
+  .preamble::before {
+    left: -50px;
+    top: 74px;
+  }
+}
 .intro {
   display: flex;
   flex-flow: column nowrap;
@@ -192,6 +296,8 @@ aside a.designer-name {
   .intro .preamble {
     margin: 50px;
     background-color: rgba(72, 154, 194, 0.5);
+    z-index: -1;
+    position: relative;
   }
 }
 

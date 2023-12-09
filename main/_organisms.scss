@@ -23,11 +23,9 @@
     .preamble {
       margin: 50px;
       background-color: $primary-opacity;
+      z-index: -1;
+      position: relative;
 
     }
   }
-  
-
 }
-
-
